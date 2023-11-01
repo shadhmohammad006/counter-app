@@ -30,8 +30,6 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  late Future<int> _counter;
   // int counter = 0;
 
   // void incrementCounter() {
@@ -49,6 +47,7 @@ class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
     final ingrementValue = Provider.of<setprovider>(context, listen: false);
+
     print('rebuilding app');
     return Scaffold(
       appBar: AppBar(
